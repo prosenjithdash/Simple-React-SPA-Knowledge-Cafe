@@ -1,7 +1,7 @@
 
 //42-2 Create Fake Data For The Blogs And Load Data
-
 import { useEffect, useState } from "react";
+import Blog from "../Blog/Blog";
 
 const Blogs = () => {
 
@@ -16,8 +16,14 @@ const Blogs = () => {
     },[])
     
     return (
-        <div>
-            <h2>Total Blogs: { blogs.length}</h2>
+        <div className="md:w-2/3 lg:md:w-2/3">
+            <h2>Total Blogs: {blogs.length}</h2>
+
+            <div>
+                {
+                    blogs.map(blog => <Blog  blog={blog}></Blog>)
+                }
+            </div>
         </div>
     );
 };
