@@ -23,7 +23,8 @@ const Blog = ({ blog, handleMark }) => {
                         <p>{reading_time} read</p>
 
                         {/* 42-5 Add Bookmark Button And Lift Up The State */}
-                        <p onClick={handleMark}><svg xmlns="http://www.w3.org/2000/svg" width="18" height="20" viewBox="0 0 18 20" fill="none">
+                        {/* 42-6 Handle Bookmark State And Display Bookmark */}
+                        <p onClick={()=>handleMark(blog)}><svg xmlns="http://www.w3.org/2000/svg" width="18" height="20" viewBox="0 0 18 20" fill="none">
                             <path d="M14.593 1.322C15.693 1.45 16.5 2.399 16.5 3.507V19L9 15.25L1.5 19V3.507C1.5 2.399 2.306 1.45 3.407 1.322C7.12319 0.890633 10.8768 0.890633 14.593 1.322Z" stroke="#111111" stroke-opacity="0.6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                         </svg></p>
                     </div>
@@ -44,6 +45,7 @@ const Blog = ({ blog, handleMark }) => {
 };
 
 Blog.propTypes = {
-    blog: PropTypes.object
+    blog: PropTypes.object.isRequired,
+    handleMark: PropTypes.func
 }
 export default Blog;

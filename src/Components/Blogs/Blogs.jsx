@@ -2,6 +2,7 @@
 //42-2 Create Fake Data For The Blogs And Load Data
 import { useEffect, useState } from "react";
 import Blog from "../Blog/Blog";
+import PropTypes from "prop-types"
 
 const Blogs = ({ handleMark }) => {
 
@@ -33,5 +34,9 @@ const Blogs = ({ handleMark }) => {
         </div>
     );
 };
+// 42-6 Handle Bookmark State And Display Bookmark
 
+Blogs.propTypes = {
+    handleMark: PropTypes.func
+}
 export default Blogs;

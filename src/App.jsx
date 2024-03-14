@@ -9,12 +9,16 @@ function App() {
   // 42-5 Add Bookmark Button And Lift Up The State
 
   // hold data
-  const [bookMark, setBookMark] = useState([]);
+  const [bookMarks, setBookMarks] = useState([]);
 
   // handle bookmark
   const handleMark = (blog) => {
     console.log('HandleBookMark.')
     console.log(blog)
+    // 42-6 Handle Bookmark State And Display Bookmark
+    const newBlogs = [...bookMarks,blog ];
+    setBookMarks(newBlogs)
+
   }
 
   return (
@@ -27,8 +31,8 @@ function App() {
 
        {/* 42-5 Add Bookmark Button And Lift Up The State */}
         <Blogs handleMark={handleMark}></Blogs>
-        
-        <BookMarks></BookMarks>
+
+        <BookMarks bookMarks={bookMarks}></BookMarks>
       </div>
 
     </div>
