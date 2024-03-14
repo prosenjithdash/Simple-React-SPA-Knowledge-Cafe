@@ -5,23 +5,30 @@ import BookMark from '../BookMark/BookMark';
 
 
 // 42-6 Handle Bookmark State And Display Bookmark
-const BookMarks = ({ bookMarks }) => {
+const BookMarks = ({ bookMarks, readingTime }) => {
     // const [title] = bookMark;
     
     return (
-        <div className="md:w-1/3 lg:w-1/3">
-            <h2 className="text-3xl">Bookmarked Blogs : {bookMarks.length}</h2>
-
-            <div>
-                {
-                    bookMarks.map(bookmark => <BookMark bookmark={bookmark}></BookMark>)
-                }
+        <div className='md:w-1/3 lg:w-1/3'>
+            <div className='bg-[#6047EC] p-4 my-4 rounded-lg text-white text-center'>
+                <h3 className="text-4xl">Spent time on read :  {readingTime} min</h3>
             </div>
-            
+            <div className=" bg-gray-100 rounded-lg h-full">
+                
+                <h2 className="text-3xl text-center py-4">Bookmarked Blogs : {bookMarks.length}</h2>
+
+                <div>
+                    {
+                        bookMarks.map(bookmark => <BookMark key={bookmark.id} bookmark={bookmark}></BookMark>)
+                    }
+                </div>
+
+            </div>
         </div>
     );
 };
 BookMarks.propTypes = {
-    bookmark: PropTypes.object
+    bookMarks: PropTypes.array,
+    readingTime: PropTypes.number
 }
 export default BookMarks;

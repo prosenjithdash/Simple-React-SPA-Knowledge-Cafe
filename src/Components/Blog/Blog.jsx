@@ -2,7 +2,7 @@
 // 42-3 Set Layout And Make React Responsive
 import PropTypes from 'prop-types'; // ES6
 
-const Blog = ({ blog, handleMark }) => {
+const Blog = ({ blog, handleMark, handleMarkAsReading }) => {
     const { title, Cover, author, author_img, posted_date, reading_time, hashtags } = blog;
     return (
         // 42-4 Display Blog Data And Hashtags
@@ -20,7 +20,7 @@ const Blog = ({ blog, handleMark }) => {
                     </div>
 
                     <div className='flex gap-5 items-center'>
-                        <p>{reading_time} read</p>
+                        <p>{reading_time} min read</p>
 
                         {/* 42-5 Add Bookmark Button And Lift Up The State */}
                         {/* 42-6 Handle Bookmark State And Display Bookmark */}
@@ -37,15 +37,16 @@ const Blog = ({ blog, handleMark }) => {
                 }
             </p>
             <div className='border-b-2  mb-[40px] '>
-                <p className='text-blue-600 border-b-2 border-blue-700 w-[100px] mb-[32px] pb-0'><ul>Mark as Read</ul></p>
+                <button onClick={() => handleMarkAsReading(reading_time)} className='text-blue-600 border-b-2 border-blue-700 w-[100px] mb-[32px] pb-0'>Mark as Read</button>
             </div>
-
+            
         </div>
     );
 };
 
 Blog.propTypes = {
     blog: PropTypes.object.isRequired,
-    handleMark: PropTypes.func
+    handleMark: PropTypes.func,
+    handleMarkAsReading: PropTypes.func
 }
 export default Blog;

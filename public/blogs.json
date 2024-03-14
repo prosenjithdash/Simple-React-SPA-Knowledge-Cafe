@@ -8,7 +8,7 @@
     "author": "John Doe",
     "author_img": "https://i.ibb.co/4YfKdtv/2cp.png",
     "posted_date": "2024-03-14",
-    "reading_time": "10 min",
+    "reading_time": 10,
     "hashtags": ["fiction", "LoremIpsum", "writing"]
   },
   {
@@ -18,7 +18,7 @@
     "author": "Jane Smith",
     "author_img": "https://i.ibb.co/4YfKdtv/2cp.png",
     "posted_date": "2024-03-13",
-    "reading_time": "8 min",
+    "reading_time": 8,
     "hashtags": ["fiction", "shortstory", "creativity"]
   },
   {
@@ -28,7 +28,7 @@
     "author": "Alex Johnson",
     "author_img": "https://i.ibb.co/4YfKdtv/2cp.png",
     "posted_date": "2024-03-12",
-    "reading_time": "15 min",
+    "reading_time": 15,
     "hashtags": ["fiction", "philosophy", "writing"]
   },
   {
@@ -38,7 +38,7 @@
     "author": "Emily Brown",
     "author_img": "https://i.ibb.co/4YfKdtv/2cp.png",
     "posted_date": "2024-03-11",
-    "reading_time": "12 min",
+    "reading_time": 12,
     "hashtags": ["fiction", "LoremIpsum", "creativity"]
   },
   {
@@ -48,7 +48,7 @@
     "author": "Michael Wilson",
     "author_img": "https://i.ibb.co/4YfKdtv/2cp.png",
     "posted_date": "2024-03-10",
-    "reading_time": "20 min",
+    "reading_time": 20,
     "hashtags": ["fiction", "writing", "creativity"]
   }
    

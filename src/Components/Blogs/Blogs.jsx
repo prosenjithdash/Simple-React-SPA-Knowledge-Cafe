@@ -4,7 +4,8 @@ import { useEffect, useState } from "react";
 import Blog from "../Blog/Blog";
 import PropTypes from "prop-types"
 
-const Blogs = ({ handleMark }) => {
+// 42-7 Add Time When Marked As Read
+const Blogs = ({ handleMark, handleMarkAsReading }) => {
 
     // hold data with useState
     const [blogs, setBlogs] = useState([]);
@@ -24,9 +25,15 @@ const Blogs = ({ handleMark }) => {
             <div>
                 {
                     blogs.map(blog => <Blog
+                        
                         key={blog.Id}
+
                         blog={blog}
+
                         handleMark={handleMark}
+
+                        // 42-7 Add Time When Marked As Read
+                        handleMarkAsReading={handleMarkAsReading}
                     >
                         </Blog>)
                 }
@@ -37,6 +44,9 @@ const Blogs = ({ handleMark }) => {
 // 42-6 Handle Bookmark State And Display Bookmark
 
 Blogs.propTypes = {
-    handleMark: PropTypes.func
+    handleMark: PropTypes.func,
+
+    // 42-7 Add Time When Marked As Read
+    handleMarkAsReading: PropTypes.func
 }
 export default Blogs;
