@@ -3,7 +3,7 @@
 import PropTypes from 'prop-types'; // ES6
 
 const Blog = ({ blog, handleMark, handleMarkAsReading }) => {
-    const { title, Cover, author, author_img, posted_date, reading_time, hashtags } = blog;
+    const {id, title, Cover, author, author_img, posted_date, reading_time, hashtags } = blog;
     return (
         // 42-4 Display Blog Data And Hashtags
 
@@ -37,7 +37,7 @@ const Blog = ({ blog, handleMark, handleMarkAsReading }) => {
                 }
             </p>
             <div className='border-b-2  mb-[40px] '>
-                <button onClick={() => handleMarkAsReading(reading_time)} className='text-blue-600 border-b-2 border-blue-700 w-[100px] mb-[32px] pb-0'>Mark as Read</button>
+                <button onClick={() => handleMarkAsReading(id,reading_time)} className='text-blue-600 border-b-2 border-blue-700 w-[100px] mb-[32px] pb-0'>Mark as Read</button>
             </div>
             
         </div>

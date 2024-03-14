@@ -11,6 +11,7 @@ function App() {
   // hold data for Bookmarks data
   const [bookMarks, setBookMarks] = useState([]);
 
+  {/* 42-7 Add Time When Marked As Read */ }
   // hold data for Reading data
   const [readingTime, setReadingTime] = useState(0);
 
@@ -27,9 +28,15 @@ function App() {
   {/* 42-7 Add Time When Marked As Read */ }
 
   // handle readingTime data
-  const handleMarkAsReading = (time) => {
+  const handleMarkAsReading = (id,time) => {
     // console.log('HandleBookMark Time.',time)
+    console.log('re',id)
     setReadingTime(readingTime + time)
+
+    // 42-8 Remove Bookmark After Read And Deploy To Surge
+    // remove the read blog from bookmark
+    const remainingBookmarks = bookMarks.filter(bookmark => bookmark.id !== id)
+    setBookMarks(remainingBookmarks);
 
   }
 

@@ -2,7 +2,7 @@
 
 [
   {
-    "Id": 1,
+    "id": 1,
     "Cover": "https://i.ibb.co/4YfKdtv/2cp.png",
     "title": "How to get your first job as a self-taught programmer",
     "author": "John Doe",
@@ -12,7 +12,7 @@
     "hashtags": ["fiction", "LoremIpsum", "writing"]
   },
   {
-    "Id": 2,
+    "id": 2,
     "Cover": "https://i.ibb.co/4YfKdtv/2cp.png",
     "title": "How to get your first job as a self-taught programmer",
     "author": "Jane Smith",
@@ -22,7 +22,7 @@
     "hashtags": ["fiction", "shortstory", "creativity"]
   },
   {
-    "Id": 3,
+    "id": 3,
     "Cover": "https://i.ibb.co/4YfKdtv/2cp.png",
     "title": "How to get your first job as a self-taught programmer",
     "author": "Alex Johnson",
@@ -32,7 +32,7 @@
     "hashtags": ["fiction", "philosophy", "writing"]
   },
   {
-    "Id": 4,
+    "id": 4,
     "Cover": "https://i.ibb.co/4YfKdtv/2cp.png",
     "title": "How to get your first job as a self-taught programmer",
     "author": "Emily Brown",
@@ -42,7 +42,7 @@
     "hashtags": ["fiction", "LoremIpsum", "creativity"]
   },
   {
-    "Id": 5,
+    "id": 5,
     "Cover": "https://i.ibb.co/4YfKdtv/2cp.png",
     "title": "How to get your first job as a self-taught programmer",
     "author": "Michael Wilson",
